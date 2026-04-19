@@ -183,75 +183,95 @@ export default function Welcome({
                 </section>
 
                 {/* Football Jerseys Grid */}
-                <section className="border-b border-[#e3e3e0] bg-white px-6 py-12 dark:border-[#3E3E3A] dark:bg-[#161615]">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-                            <h2 className="text-3xl font-bold text-[#1b1b18] dark:text-[#EDEDEC]">
-                                Football Jerseys
+                <section className="border-b border-[#e3e3e0] bg-white py-16 dark:border-[#3E3E3A] dark:bg-[#161615]">
+                    <div className="">
+                        <div className="mb-5 grid grid-cols-1 gap-6 pb-10 lg:grid-cols-2 lg:items-start">
+                            <h2 className="text-5xl font-black text-center tracking-tight text-[#1b1b18] dark:text-[#EDEDEC]">
+                                Football Jerseys Sri Lanka – Premium Club &
+                                National Kits
                             </h2>
-                            <p className="max-w-md text-sm text-muted-foreground md:text-right">
-                                Shop the latest official kits from top clubs
-                                worldwide. Premium quality, authentic licensing.
+                            <p className="text-md leading-relaxed text-muted-foreground">
+                                Looking to upgrade your collection of football
+                                jerseys sri lanka with premium quality? Fusion
+                                Gear offers authentic club and national team
+                                jerseys, lifestyle kits, training gear, and
+                                accessories – imported and delivered islandwide
+                                within 15–20 days. Whether you're supporting
+                                your favourite club or collecting the latest
+                                editions, our curated collections guarantee
+                                accuracy, comfort, and durability.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                        <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
                             <Link
                                 href="/"
-                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                                className="group relative block aspect-square overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
                             >
                                 <img
                                     src="/images/jersey.jpg"
                                     alt="Football Jerseys"
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
-                                    <span className="text-xl font-bold text-white">
+                                <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent pt-20 pb-6 transition-opacity duration-300 group-hover:from-[#f53003]/80">
+                                    <span className="text-2xl font-bold tracking-wider text-white uppercase">
                                         Jerseys
                                     </span>
-                                </div>
-                            </Link>
-                            <Link
-                                href="/"
-                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
-                            >
-                                <img
-                                    src="/images/track suits.jpg"
-                                    alt="Tracksuits"
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
-                                    <span className="text-xl font-bold text-white">
-                                        Tracksuits
+                                    <span className="mt-1 text-xs text-white/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Official Kits
                                     </span>
                                 </div>
                             </Link>
                             <Link
                                 href="/"
-                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                                className="group relative block aspect-square overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                            >
+                                <img
+                                    src="/images/track suits 2.jpg"
+                                    alt="Tracksuits"
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent pt-20 pb-6 transition-opacity duration-300 group-hover:from-[#f53003]/80">
+                                    <span className="text-2xl font-bold tracking-wider text-white uppercase">
+                                        Tracksuits
+                                    </span>
+                                    <span className="mt-1 text-xs text-white/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Training Gear
+                                    </span>
+                                </div>
+                            </Link>
+                            <Link
+                                href="/"
+                                className="group relative block aspect-square overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
                             >
                                 <img
                                     src="/images/retro.jpg"
                                     alt="Retro Jerseys"
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
-                                    <span className="text-xl font-bold text-white">
+                                <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent pt-20 pb-6 transition-opacity duration-300 group-hover:from-[#f53003]/80">
+                                    <span className="text-2xl font-bold tracking-wider text-white uppercase">
                                         Retro
+                                    </span>
+                                    <span className="mt-1 text-xs text-white/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Vintage Classics
                                     </span>
                                 </div>
                             </Link>
                             <Link
                                 href="/"
-                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                                className="group relative block aspect-square overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
                             >
                                 <img
                                     src="/images/hoodies.jpg"
                                     alt="Hoodies"
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
-                                    <span className="text-xl font-bold text-white">
+                                <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent pt-20 pb-6 transition-opacity duration-300 group-hover:from-[#f53003]/80">
+                                    <span className="text-2xl font-bold tracking-wider text-white uppercase">
                                         Hoodies
+                                    </span>
+                                    <span className="mt-1 text-xs text-white/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Casual Wear
                                     </span>
                                 </div>
                             </Link>
