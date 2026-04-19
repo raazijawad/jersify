@@ -1,0 +1,18 @@
+A clean e-commerce product grid featuring four high-quality football jerseys displayed on athletic black headless mannequins. Each jersey is captured in a front-facing studio shot against a minimalist industrial backdrop of black metal mesh shelving. The jerseys include a white Spain away kit, a light mint France long-sleeve, a dark blue Brazil pattern, and a black/blue Argentina floral-pattern kit. Below each image is a clear layout consisting of a bold, uppercase sans-serif title (e.g., 'SPAIN 2026 WC AWAY AUTHENTIC JERSEY') followed by the price displayed in a smaller, lighter font. The lighting is soft and even, highlighting the fabric texture and team crests. The overall aesthetic is organized, modern, and retail-focused."
+
+Design Elements Breakdown
+If you are building this into a web project, here are the technical UI/UX details to keep in mind:
+
+Aspect Ratio Consistency: All product images use the exact same portrait aspect ratio. This is crucial for a clean "alignment" across the row.
+
+The "Mannequin" Choice: Using black, matte mannequins helps the colors of the jerseys pop without the distraction of a human model's face or skin tone. It makes the store feel more like a "pro shop."
+
+Typography Hierarchy:
+
+Product Title: All-caps, bold, black. It uses a high-contrast weight to ensure the user knows exactly what the item is at a glance.
+
+Price: Lighter weight or gray-scale color. It’s secondary to the product name to keep the focus on the "item" first, "cost" second.
+
+Background Uniformity: The black mesh background provides a subtle texture that feels "sporty" and "premium" without being as flat as a plain white studio background.
+
+Spacing (Gutter): There is a consistent 15–20px "gutter" (white space) between each card, which prevents the grid from feeling cluttered.

@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import { Head, Link, usePage } from '@inertiajs/react';
 import { Button } from '@/components/ui/button';
 import {
@@ -60,6 +61,34 @@ const featuredJerseys: Jersey[] = [
         price: 89.99,
         image: 'INT',
     },
+    {
+        id: 7,
+        name: 'Liverpool Home 24/25',
+        league: 'Premier League',
+        price: 89.99,
+        image: 'LIV',
+    },
+    {
+        id: 8,
+        name: 'Arsenal Home 24/25',
+        league: 'Premier League',
+        price: 84.99,
+        image: 'ARS',
+    },
+    {
+        id: 9,
+        name: 'AC Milan Home 24/25',
+        league: 'Serie A',
+        price: 79.99,
+        image: 'ACM',
+    },
+    {
+        id: 10,
+        name: 'Juventus Home 24/25',
+        league: 'Serie A',
+        price: 84.99,
+        image: 'JUV',
+    },
 ];
 
 export default function Welcome({
@@ -68,6 +97,28 @@ export default function Welcome({
     canRegister?: boolean;
 }) {
     const { auth } = usePage().props;
+    const sliderRef = useRef<HTMLDivElement>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handlePointerDown = (e: React.PointerEvent) => {
+        setIsDragging(true);
+        setStartX(e.pageX - (sliderRef.current?.offsetLeft || 0));
+        setScrollLeft(sliderRef.current?.scrollLeft || 0);
+    };
+
+    const handlePointerMove = (e: React.PointerEvent) => {
+        if (!isDragging || !sliderRef.current) return;
+        e.preventDefault();
+        const x = e.pageX - sliderRef.current.offsetLeft;
+        const walk = (x - startX) * 2;
+        sliderRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const handlePointerUp = () => {
+        setIsDragging(false);
+    };
 
     return (
         <>
@@ -280,7 +331,7 @@ export default function Welcome({
                 </section>
 
                 {/* Featured Products */}
-                <section className="relative overflow-hidden px-6 py-5 dark:border-[#3E3E3A] dark:bg-[#0a0a0a]">
+                <section className="relative border-t border-[#e3e3e0] px-6 py-5 dark:border-[#3E3E3A] dark:bg-[#0a0a0a]">
                     <div
                         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
                         style={{
@@ -302,7 +353,7 @@ export default function Welcome({
                                 <span className="font-bold">Latest</span>{' '}
                                 <span className="font-light">Lineup</span>
                             </h3>
-                            <p className="mx-auto mt-1 max-w-lg text-md text-muted-foreground">
+                            <p className="text-md mx-auto mt-1 max-w-lg text-muted-foreground">
                                 New season, new look. Grab yours now!
                             </p>
                         </div>
@@ -317,42 +368,59 @@ export default function Welcome({
                                 View All
                             </Link>
                         </div>
-                        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                            {featuredJerseys.map((jersey) => (
-                                <Card
-                                    key={jersey.id}
-                                    className="overflow-hidden transition-shadow hover:shadow-lg"
-                                >
-                                    <div className="flex h-48 items-center justify-center bg-[#f5f5f5] dark:bg-[#1D1D1D]">
-                                        <span className="text-4xl font-bold text-[#ccc] dark:text-[#444]">
-                                            {jersey.image}
-                                        </span>
+                        <div
+                            className="scrollbar-hide -mx-6 flex gap-5 overflow-x-auto px-6 pb-4"
+                            style={{ touchAction: 'pan-x' }}
+                            ref={sliderRef}
+                            onPointerDown={handlePointerDown}
+                            onPointerMove={handlePointerMove}
+                            onPointerUp={handlePointerUp}
+                            onPointerLeave={handlePointerUp}
+                        >
+                            <div className="flex w-max gap-5">
+                                {featuredJerseys.map((jersey) => (
+                                    <div
+                                        key={jersey.id}
+                                        className="group relative block w-64 shrink-0 overflow-hidden bg-[#0a0a0a] dark:bg-[#141414]"
+                                    >
+                                        <Link
+                                            href="/"
+                                            draggable={false}
+                                            className="block"
+                                        >
+                                            <div className="aspect-[3/4] w-full overflow-hidden">
+                                                <div className="flex h-full w-full items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] transition-transform duration-500 group-hover:scale-105">
+                                                    <span className="text-6xl font-bold text-[#2a2a2a]">
+                                                        {jersey.image}
+                                                    </span>
+                                                </div>
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+                                            </div>
+                                            <div className="absolute right-0 bottom-0 left-0 p-4">
+                                                <h3 className="mb-1 text-sm font-bold tracking-wide text-white uppercase">
+                                                    {jersey.name}
+                                                </h3>
+                                                <p className="text-lg font-light text-white/70">
+                                                    ${jersey.price}
+                                                </p>
+                                            </div>
+                                            <div className="absolute top-3 right-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                                <Button
+                                                    size="sm"
+                                                    className="bg-white text-black hover:bg-gray-200"
+                                                >
+                                                    <span className="text-xs">
+                                                        View
+                                                    </span>
+                                                </Button>
+                                            </div>
+                                        </Link>
                                     </div>
-                                    <CardHeader className="pb-2">
-                                        <CardTitle className="line-clamp-1 text-lg">
-                                            {jersey.name}
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="pb-2">
-                                        <p className="text-sm text-muted-foreground">
-                                            {jersey.league}
-                                        </p>
-                                        <p className="mt-2 text-2xl font-bold text-[#f53003]">
-                                            ${jersey.price}
-                                        </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <Button className="w-full" asChild>
-                                            <Link href="/">Add to Cart</Link>
-                                        </Button>
-                                    </CardFooter>
-                                </Card>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
-
-                {/* Features Section */}
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
