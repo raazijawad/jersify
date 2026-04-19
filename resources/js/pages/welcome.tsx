@@ -17,12 +17,6 @@ interface Jersey {
     image: string;
 }
 
-interface Category {
-    id: number;
-    name: string;
-    count: number;
-}
-
 const featuredJerseys: Jersey[] = [
     {
         id: 1,
@@ -66,14 +60,6 @@ const featuredJerseys: Jersey[] = [
         price: 89.99,
         image: 'INT',
     },
-];
-
-const categories: Category[] = [
-    { id: 1, name: 'Premier League', count: 20 },
-    { id: 2, name: 'La Liga', count: 20 },
-    { id: 3, name: 'Serie A', count: 20 },
-    { id: 4, name: 'Bundesliga', count: 18 },
-    { id: 5, name: 'Ligue 1', count: 18 },
 ];
 
 export default function Welcome({
@@ -196,27 +182,79 @@ export default function Welcome({
                     </div>
                 </section>
 
-                {/* Categories Section */}
+                {/* Football Jerseys Grid */}
                 <section className="border-b border-[#e3e3e0] bg-white px-6 py-12 dark:border-[#3E3E3A] dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
-                        <h2 className="mb-8 text-center text-2xl font-bold">
-                            Shop by League
-                        </h2>
-                        <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
-                            {categories.map((category) => (
-                                <Link
-                                    key={category.id}
-                                    href="/"
-                                    className="flex flex-col items-center rounded-lg border border-[#e3e3e0] p-4 transition-colors hover:border-[#f53003] hover:text-[#f53003] dark:border-[#3E3E3A]"
-                                >
-                                    <span className="text-lg font-semibold">
-                                        {category.name}
+                        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                            <h2 className="text-3xl font-bold text-[#1b1b18] dark:text-[#EDEDEC]">
+                                Football Jerseys
+                            </h2>
+                            <p className="max-w-md text-sm text-muted-foreground md:text-right">
+                                Shop the latest official kits from top clubs
+                                worldwide. Premium quality, authentic licensing.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                            <Link
+                                href="/"
+                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                            >
+                                <img
+                                    src="/images/jersey.jpg"
+                                    alt="Football Jerseys"
+                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
+                                    <span className="text-xl font-bold text-white">
+                                        Jerseys
                                     </span>
-                                    <span className="text-sm text-muted-foreground">
-                                        {category.count} Teams
+                                </div>
+                            </Link>
+                            <Link
+                                href="/"
+                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                            >
+                                <img
+                                    src="/images/track suits.jpg"
+                                    alt="Tracksuits"
+                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
+                                    <span className="text-xl font-bold text-white">
+                                        Tracksuits
                                     </span>
-                                </Link>
-                            ))}
+                                </div>
+                            </Link>
+                            <Link
+                                href="/"
+                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                            >
+                                <img
+                                    src="/images/retro.jpg"
+                                    alt="Retro Jerseys"
+                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
+                                    <span className="text-xl font-bold text-white">
+                                        Retro
+                                    </span>
+                                </div>
+                            </Link>
+                            <Link
+                                href="/"
+                                className="group relative block aspect-[4/5] overflow-hidden bg-[#f5f5f5] dark:bg-[#1D1D1D]"
+                            >
+                                <img
+                                    src="/images/hoodies.jpg"
+                                    alt="Hoodies"
+                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 bg-black/60 px-4 py-3 text-center">
+                                    <span className="text-xl font-bold text-white">
+                                        Hoodies
+                                    </span>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </section>
