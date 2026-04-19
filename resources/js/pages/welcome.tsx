@@ -74,7 +74,7 @@ export default function Welcome({
             <Head title="Jersify - Premium Football Jerseys" />
             <div className="min-h-screen bg-[#FDFDFC] text-[#1b1b18] dark:bg-[#0a0a0a] dark:text-[#EDEDEC]">
                 {/* Header */}
-                <header className="border-b border-[#e3e3e0] bg-white px-6 py-4 dark:border-[#3E3E3A] dark:bg-[#161615]">
+                <header className="bg-white px-6 py-4 dark:border-[#3E3E3A] dark:bg-[#161615]">
                     <div className="mx-auto flex max-w-7xl items-center justify-between">
                         <Link href="/" className="flex items-center gap-2">
                             <span className="text-2xl font-bold text-[#f53003] dark:text-[#FF4433]">
@@ -183,7 +183,7 @@ export default function Welcome({
                 </section>
 
                 {/* Football Jerseys Grid */}
-                <section className="border-b border-[#e3e3e0] bg-white py-16 dark:border-[#3E3E3A] dark:bg-[#161615]">
+                <section className="bg-white pt-16 pb-8 dark:bg-[#161615]">
                     <div className="">
                         <div className="mb-5 grid grid-cols-1 gap-6 pb-10 lg:grid-cols-2 lg:items-start">
                             <h2 className="text-center text-5xl font-black tracking-tight text-[#1b1b18] dark:text-[#EDEDEC]">
@@ -280,13 +280,29 @@ export default function Welcome({
                 </section>
 
                 {/* Featured Products */}
-                <section className="bg-[#FDFDFC] px-6 py-16 dark:bg-[#0a0a0a]">
-                    <div className="mx-auto max-w-7xl">
-                        <div className="mb-6 text-center">
-                            <h3 className="text-3xl font-bold text-[#1b1b18] dark:text-[#EDEDEC]">
-                                LATEST LINEUP
+                <section className="relative overflow-hidden px-6 py-5 dark:border-[#3E3E3A] dark:bg-[#0a0a0a]">
+                    <div
+                        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+                        style={{
+                            backgroundImage:
+                                'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
+                            backgroundSize: '40px 40px',
+                        }}
+                    ></div>
+
+                    <div className="relative mx-auto max-w-7xl">
+                        <div className="mb-12 text-center">
+                            <h3
+                                className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
+                                style={{
+                                    fontFamily: 'system-ui',
+                                    letterSpacing: '-0.02em',
+                                }}
+                            >
+                                <span className="font-bold">Latest</span>{' '}
+                                <span className="font-light">Lineup</span>
                             </h3>
-                            <p className="mt-2 text-lg text-muted-foreground">
+                            <p className="mx-auto mt-1 max-w-lg text-md text-muted-foreground">
                                 New season, new look. Grab yours now!
                             </p>
                         </div>
