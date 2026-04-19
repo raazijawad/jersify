@@ -186,7 +186,7 @@ export default function Welcome({
                 <section className="border-b border-[#e3e3e0] bg-white py-16 dark:border-[#3E3E3A] dark:bg-[#161615]">
                     <div className="">
                         <div className="mb-5 grid grid-cols-1 gap-6 pb-10 lg:grid-cols-2 lg:items-start">
-                            <h2 className="text-5xl font-black text-center tracking-tight text-[#1b1b18] dark:text-[#EDEDEC]">
+                            <h2 className="text-center text-5xl font-black tracking-tight text-[#1b1b18] dark:text-[#EDEDEC]">
                                 Football Jerseys Sri Lanka – Premium Club &
                                 National Kits
                             </h2>
@@ -282,6 +282,14 @@ export default function Welcome({
                 {/* Featured Products */}
                 <section className="bg-[#FDFDFC] px-6 py-16 dark:bg-[#0a0a0a]">
                     <div className="mx-auto max-w-7xl">
+                        <div className="mb-6 text-center">
+                            <h3 className="text-3xl font-bold text-[#1b1b18] dark:text-[#EDEDEC]">
+                                LATEST LINEUP
+                            </h3>
+                            <p className="mt-2 text-lg text-muted-foreground">
+                                New season, new look. Grab yours now!
+                            </p>
+                        </div>
                         <div className="mb-8 flex items-center justify-between">
                             <h2 className="text-2xl font-bold">
                                 Featured Jerseys
