@@ -414,7 +414,7 @@ export default function Welcome({
                                 New season, new look. Grab yours now!
                             </p>
                         </div>
-        
+
                         <div
                             className="scrollbar-hide flex gap-5 overflow-x-auto pb-4"
                             style={{ touchAction: 'pan-x' }}
@@ -468,6 +468,44 @@ export default function Welcome({
                         </div>
                     </div>
                 </section>
+
+                {/* Full Screen Banner */}
+                <section className="relative h-screen overflow-hidden">
+                    <div className="absolute inset-0">
+                        <img
+                            src="/images/retro.jpg"
+                            alt="Banner"
+                            className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+                    </div>
+
+                    <div className="relative flex h-full flex-col items-center justify-center px-8 text-center">
+                        <div className="max-w-xl">
+                            <h2 className="text-5xl leading-none font-black tracking-tight text-white uppercase md:text-7xl lg:text-8xl">
+                                Retro
+                                <br />
+                                <span className="text-[#f53003]">Classics</span>
+                            </h2>
+
+                            <p className="mt-6 text-xl leading-relaxed font-light text-white/80">
+                                Timeless designs that never go out of style.
+                                Celebrate the legends of yesterday.
+                            </p>
+
+                            <div className="mt-8 flex justify-center">
+                                <Button
+                                    asChild
+                                    size="lg"
+                                    className="bg-[#f53003] px-10 py-7 text-lg font-bold tracking-wider text-white uppercase transition-all hover:bg-[#e42d03]"
+                                >
+                                    <Link href="/">Explore Collection</Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
