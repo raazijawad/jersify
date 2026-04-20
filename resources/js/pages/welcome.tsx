@@ -550,7 +550,7 @@ export default function Welcome({
                                                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                                 />
                                             </div>
-                                            <div className="mt-2">
+                                            <div className="mt-2 text-center">
                                                 <h3 className="mb-1 text-base font-bold tracking-wide text-[#1b1b18] uppercase dark:text-[#EDEDEC]">
                                                     Manchester United
                                                 </h3>
