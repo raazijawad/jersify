@@ -424,44 +424,50 @@ export default function Welcome({
                             onPointerUp={handlePointerUp}
                             onPointerLeave={handlePointerUp}
                         >
-                            <div className="flex w-max gap-5 px-2">
+                            <div className="flex w-max gap-6 px-2">
                                 {featuredJerseys.map((jersey) => (
                                     <div
                                         key={jersey.id}
-                                        className="group relative block w-64 shrink-0 overflow-hidden bg-[#0a0a0a] dark:bg-[#141414]"
+                                        className="group relative w-64 shrink-0"
                                     >
                                         <Link
                                             href="/"
                                             draggable={false}
                                             className="block"
                                         >
-                                            <div className="aspect-[3/4] w-full overflow-hidden">
-                                                <div className="flex h-full w-full items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#0a0a0a] transition-transform duration-500 group-hover:scale-105">
-                                                    <span className="text-6xl font-bold text-[#2a2a2a]">
-                                                        {jersey.image}
-                                                    </span>
-                                                </div>
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
+                                            <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#f5f5f3] dark:bg-[#1a1a1a]">
+                                                <img
+                                                    src="/images/blue jersey.jpg"
+                                                    alt={jersey.name}
+                                                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                                />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                             </div>
-                                            <div className="absolute right-0 bottom-0 left-0 p-4">
-                                                <h3 className="mb-1 text-sm font-bold tracking-wide text-white uppercase">
-                                                    {jersey.name}
-                                                </h3>
-                                                <p className="text-lg font-light text-white/70">
-                                                    ${jersey.price}
-                                                </p>
-                                            </div>
-                                            <div className="absolute top-3 right-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            <div className="absolute top-3 right-3 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                                                 <Button
                                                     size="sm"
-                                                    className="bg-white text-black hover:bg-gray-200"
+                                                    className="bg-white text-black shadow-lg hover:bg-gray-100"
                                                 >
-                                                    <span className="text-xs">
+                                                    <span className="text-xs font-medium">
                                                         View
                                                     </span>
                                                 </Button>
                                             </div>
                                         </Link>
+                                        <div className="mt-3 space-y-1">
+                                            <h3
+                                                className="text-sm font-semibold tracking-wide text-[#1b1b18] uppercase dark:text-[#EDEDEC]"
+                                                style={{
+                                                    fontFamily:
+                                                        'Instrument Sans, sans-serif',
+                                                }}
+                                            >
+                                                {jersey.name}
+                                            </h3>
+                                            <p className="text-base font-light text-muted-foreground">
+                                                ${jersey.price}
+                                            </p>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
