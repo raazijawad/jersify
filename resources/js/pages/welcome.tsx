@@ -192,41 +192,99 @@ export default function Welcome({
                 </header>
 
                 {/* Hero Section */}
-                <section className="relative h-screen text-white">
+                <section className="relative h-screen overflow-hidden text-white">
                     <div className="absolute inset-0">
                         <img
                             src="/images/1 premier football group events.jpeg"
                             alt="Hero Banner"
                             className="h-full w-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/60" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
                     </div>
-                    <div className="relative -mt-16 flex h-full flex-col items-center justify-center px-6 text-center">
-                        <div className="space-y-6">
-                            <h1 className="text-4xl leading-tight font-bold md:text-7xl">
-                                Wear Your Team Pride
+
+                    {/* Decorative elements */}
+                    <div className="absolute top-1/4 right-0 h-96 w-96 translate-x-1/2 rounded-full bg-[#f53003]/10 blur-3xl" />
+                    <div className="absolute bottom-1/4 left-0 h-64 w-64 -translate-x-1/2 rounded-full bg-[#f53003]/10 blur-3xl" />
+
+                    <div className="relative flex h-full flex-col items-start justify-center px-8 md:px-20">
+                        <div className="max-w-2xl">
+                            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur-sm">
+                                <span className="h-2 w-2 animate-pulse rounded-full bg-[#f53003]" />
+                                Official Licensed Merchandise
+                            </div>
+
+                            <h1 className="text-6xl leading-[0.9] font-black tracking-tight md:text-[5.5rem] lg:text-[7rem]">
+                                <span className="block">WEAR YOUR</span>
+                                <span className="relative inline-block">
+                                    <span className="relative z-10 text-[#f53003]">
+                                        TEAM
+                                    </span>
+                                    <svg
+                                        className="absolute -bottom-2 left-0 w-full text-[#f53003]"
+                                        viewBox="0 0 100 8"
+                                        preserveAspectRatio="none"
+                                    >
+                                        <path
+                                            d="M0,6 Q25,0 50,6 T100,6"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                            fill="none"
+                                        />
+                                    </svg>
+                                </span>
+                                <span className="block">PRIDE</span>
                             </h1>
-                            <p className="text-md text-white/90 md:text-md -mt-5">
-                                Get authentic football jerseys from the world's
-                                top leagues. Official licensing, premium
-                                quality.
+
+                            <p className="mt-8 max-w-lg text-xl leading-relaxed font-light text-white/80">
+                                Discover authentic football jerseys from the
+                                world's top leagues. Premium quality, official
+                                licensing guaranteed.
                             </p>
-                            <div className="flex gap-4">
+
+                            <div className="mt-10 flex flex-wrap gap-4">
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="bg-white text-[#f53003] hover:bg-gray-100"
+                                    className="group relative bg-[#f53003] px-10 py-7 text-lg font-bold tracking-wider text-white uppercase transition-all hover:bg-[#e42d03] hover:shadow-[0_0_30px_rgba(245,48,3,0.4)]"
                                 >
-                                    <Link href="/">Shop Now</Link>
+                                    <Link
+                                        href="/"
+                                        className="flex items-center gap-3"
+                                    >
+                                        Shop Now
+                                        <span className="inline-block transition-transform group-hover:translate-x-1">
+                                            →
+                                        </span>
+                                    </Link>
                                 </Button>
                                 <Button
                                     asChild
                                     size="lg"
-                                    variant="outline"
-                                    className="border-white text-white hover:bg-white hover:text-[#f53003]"
+                                    className="group relative border-2 border-white bg-transparent px-10 py-7 text-lg font-bold tracking-wider text-white uppercase transition-all hover:bg-white hover:text-black"
                                 >
-                                    <Link href="/">Learn More</Link>
+                                    <Link
+                                        href="/"
+                                        className="flex items-center gap-3"
+                                    >
+                                        Learn More
+                                        <span className="inline-block transition-transform group-hover:translate-x-1">
+                                            →
+                                        </span>
+                                    </Link>
                                 </Button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Scroll indicator */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+                        <div className="flex flex-col items-center gap-2 text-sm text-white/60">
+                            <span className="tracking-widest uppercase">
+                                Scroll
+                            </span>
+                            <div className="h-10 w-6 rounded-full border-2 border-white/40 p-1">
+                                <div className="h-full w-full animate-bounce rounded-full bg-white/60" />
                             </div>
                         </div>
                     </div>
@@ -330,7 +388,7 @@ export default function Welcome({
                 </section>
 
                 {/* Featured Products */}
-                <section className="relative border-t border-[#e3e3e0] px-6 py-5 dark:border-[#3E3E3A] dark:bg-[#0a0a0a]">
+                <section className="relative px-6 py-5 dark:border-[#3E3E3A] dark:bg-[#0a0a0a]">
                     <div
                         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
                         style={{
@@ -341,7 +399,7 @@ export default function Welcome({
                     ></div>
 
                     <div className="max-w-8xl relative">
-                        <div className="mb-12 text-center">
+                        <div className="mb-10 text-center">
                             <h3
                                 className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
                                 style={{
@@ -356,17 +414,7 @@ export default function Welcome({
                                 New season, new look. Grab yours now!
                             </p>
                         </div>
-                        <div className="mb-8 flex items-center justify-between">
-                            <h2 className="text-2xl font-bold">
-                                Featured Jerseys
-                            </h2>
-                            <Link
-                                href="/"
-                                className="text-sm font-medium text-[#f53003] hover:underline"
-                            >
-                                View All
-                            </Link>
-                        </div>
+        
                         <div
                             className="scrollbar-hide flex gap-5 overflow-x-auto pb-4"
                             style={{ touchAction: 'pan-x' }}
