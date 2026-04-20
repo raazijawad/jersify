@@ -506,6 +506,25 @@ export default function Welcome({
                     </div>
                 </section>
 
+                {/* Retro Collection Text */}
+                <section className="bg-white px-6 py-12 dark:bg-[#161615]">
+                    <div className="mx-auto max-w-7xl text-center">
+                        <h3
+                            className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
+                            style={{
+                                fontFamily: 'system-ui',
+                                letterSpacing: '-0.02em',
+                            }}
+                        >
+                            <span className="font-bold">TOP</span>{' '}
+                            <span className="font-light">PICKS</span>
+                        </h3>
+                        <p className="text-md mx-auto mt-1 max-w-lg text-muted-foreground">
+                            The ultimate fan-favorite collection.
+                        </p>
+                    </div>
+                </section>
+
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
