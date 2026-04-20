@@ -192,7 +192,7 @@ export default function Welcome({
                 </header>
 
                 {/* Hero Section */}
-                <section className="relative px-6 py-20 text-white">
+                <section className="relative h-screen text-white">
                     <div className="absolute inset-0">
                         <img
                             src="/images/1 premier football group events.jpeg"
@@ -201,9 +201,9 @@ export default function Welcome({
                         />
                         <div className="absolute inset-0 bg-black/60" />
                     </div>
-                    <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+                    <div className="relative -mt-16 flex h-full flex-col items-center justify-center px-6 text-center">
                         <div className="space-y-6">
-                            <h1 className="text-4xl leading-tight font-bold md:text-6xl">
+                            <h1 className="text-4xl leading-tight font-bold md:text-7xl">
                                 Wear Your Team Pride
                             </h1>
                             <p className="text-lg text-white/90 md:text-xl">
