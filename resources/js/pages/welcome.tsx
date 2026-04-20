@@ -341,7 +341,7 @@ export default function Welcome({
                         }}
                     ></div>
 
-                    <div className="relative mx-auto max-w-7xl">
+                    <div className="relative     max-w-8xl">
                         <div className="mb-12 text-center">
                             <h3
                                 className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
@@ -369,7 +369,7 @@ export default function Welcome({
                             </Link>
                         </div>
                         <div
-                            className="scrollbar-hide -mx-6 flex gap-5 overflow-x-auto px-6 pb-4"
+                            className="scrollbar-hide flex gap-5 overflow-x-auto pb-4"
                             style={{ touchAction: 'pan-x' }}
                             ref={sliderRef}
                             onPointerDown={handlePointerDown}
@@ -377,7 +377,7 @@ export default function Welcome({
                             onPointerUp={handlePointerUp}
                             onPointerLeave={handlePointerUp}
                         >
-                            <div className="flex w-max gap-5">
+                            <div className="flex w-max gap-5 px-2">
                                 {featuredJerseys.map((jersey) => (
                                     <div
                                         key={jersey.id}
