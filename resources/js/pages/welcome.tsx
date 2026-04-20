@@ -206,7 +206,7 @@ export default function Welcome({
                             <h1 className="text-4xl leading-tight font-bold md:text-7xl">
                                 Wear Your Team Pride
                             </h1>
-                            <p className="text-lg text-white/90 md:text-xl">
+                            <p className="text-md text-white/90 md:text-md -mt-5">
                                 Get authentic football jerseys from the world's
                                 top leagues. Official licensing, premium
                                 quality.
