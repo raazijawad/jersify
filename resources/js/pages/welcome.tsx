@@ -525,6 +525,50 @@ export default function Welcome({
                     </div>
                 </section>
 
+                {/* Top Picks Cards */}
+                <section className="bg-white pb-16 dark:bg-[#161615]">
+                    <div className="max-w-8xl relative">
+                        <div
+                            className="scrollbar-hide flex gap-5 overflow-x-auto pb-4"
+                            style={{ touchAction: 'pan-x' }}
+                        >
+                            <div className="flex w-max gap-5 px-2">
+                                {[1, 2, 3, 4, 5, 6].map((item) => (
+                                    <div
+                                        key={item}
+                                        className="group relative block w-80 shrink-0"
+                                    >
+                                        <Link
+                                            href="/"
+                                            draggable={false}
+                                            className="block"
+                                        >
+                                            <div className="aspect-[4/5] w-full overflow-hidden">
+                                                <img
+                                                    src="/images/card pics.avif"
+                                                    alt={`Top Pick ${item}`}
+                                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                />
+                                            </div>
+                                            <div className="mt-2">
+                                                <h3 className="mb-1 text-base font-bold tracking-wide text-[#1b1b18] uppercase dark:text-[#EDEDEC]">
+                                                    Manchester United
+                                                </h3>
+                                                <p className="mb-1 text-sm text-muted-foreground">
+                                                    Home Kit 24/25
+                                                </p>
+                                                <p className="text-lg font-bold text-[#f53003]">
+                                                    $89.99
+                                                </p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
