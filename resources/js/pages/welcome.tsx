@@ -125,38 +125,38 @@ export default function Welcome({
             <Head title="Jersify - Premium Football Jerseys" />
             <div className="min-h-screen bg-[#FDFDFC] text-[#1b1b18] dark:bg-[#0a0a0a] dark:text-[#EDEDEC]">
                 {/* Header */}
-                <header className="bg-white px-6 py-4 dark:border-[#3E3E3A] dark:bg-[#161615]">
+                <header className="absolute top-0 right-0 left-0 z-50 px-6 py-4">
                     <div className="mx-auto flex max-w-7xl items-center justify-between">
                         <Link href="/" className="flex items-center gap-2">
                             <span className="text-2xl font-bold text-[#f53003] dark:text-[#FF4433]">
                                 J
                             </span>
-                            <span className="text-xl font-semibold">
+                            <span className="text-xl font-semibold text-white">
                                 Jersify
                             </span>
                         </Link>
                         <nav className="hidden items-center gap-6 md:flex">
                             <Link
                                 href="/"
-                                className="text-sm font-medium hover:text-[#f53003]"
+                                className="text-sm font-medium text-white hover:text-[#f53003]"
                             >
                                 Home
                             </Link>
                             <Link
                                 href="/"
-                                className="text-sm text-muted-foreground hover:text-[#f53003]"
+                                className="text-sm font-medium text-white hover:text-[#f53003]"
                             >
                                 Shop
                             </Link>
                             <Link
                                 href="/"
-                                className="text-sm text-muted-foreground hover:text-[#f53003]"
+                                className="text-sm font-medium text-white hover:text-[#f53003]"
                             >
                                 Teams
                             </Link>
                             <Link
                                 href="/"
-                                className="text-sm text-muted-foreground hover:text-[#f53003]"
+                                className="text-sm font-medium text-white hover:text-[#f53003]"
                             >
                                 About
                             </Link>
@@ -165,7 +165,7 @@ export default function Welcome({
                             {auth.user ? (
                                 <Link
                                     href="/dashboard"
-                                    className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+                                    className="inline-block rounded-sm border border-white px-5 py-1.5 text-sm leading-normal text-white hover:bg-white hover:text-[#f53003]"
                                 >
                                     Dashboard
                                 </Link>
@@ -173,14 +173,14 @@ export default function Welcome({
                                 <>
                                     <Link
                                         href={login()}
-                                        className="inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A]"
+                                        className="inline-block rounded-sm border border-white px-5 py-1.5 text-sm leading-normal text-white hover:bg-white hover:text-[#f53003]"
                                     >
                                         Log in
                                     </Link>
                                     {canRegister && (
                                         <Link
                                             href={register()}
-                                            className="inline-block rounded-sm border border-[#19140035] bg-[#f53003] px-5 py-1.5 text-sm leading-normal text-white hover:border-[#1915014a] hover:bg-[#e42d03] dark:border-[#3E3E3A] dark:bg-[#FF4433] dark:hover:bg-[#e42d03]"
+                                            className="inline-block rounded-sm border border-white bg-[#f53003] px-5 py-1.5 text-sm leading-normal text-white hover:border-[#1915014a] hover:bg-[#e42d03] dark:border-[#3E3E3A] dark:bg-[#FF4433] dark:hover:bg-[#e42d03]"
                                         >
                                             Register
                                         </Link>
@@ -192,8 +192,16 @@ export default function Welcome({
                 </header>
 
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-[#f53003] to-[#ff6b35] px-6 py-20 text-white dark:from-[#CC2903] dark:to-[#e42d03]">
-                    <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
+                <section className="relative px-6 py-20 text-white">
+                    <div className="absolute inset-0">
+                        <img
+                            src="/images/1 premier football group events.jpeg"
+                            alt="Hero Banner"
+                            className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/60" />
+                    </div>
+                    <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2">
                         <div className="space-y-6">
                             <h1 className="text-4xl leading-tight font-bold md:text-6xl">
                                 Wear Your Team Pride
@@ -219,15 +227,6 @@ export default function Welcome({
                                 >
                                     <Link href="/">Learn More</Link>
                                 </Button>
-                            </div>
-                        </div>
-                        <div className="flex justify-center">
-                            <div className="relative h-64 w-64 rounded-full bg-white/10 p-8 md:h-80 md:w-80">
-                                <div className="flex h-full items-center justify-center">
-                                    <span className="text-6xl font-bold md:text-8xl">
-                                        ⚽
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -341,7 +340,7 @@ export default function Welcome({
                         }}
                     ></div>
 
-                    <div className="relative     max-w-8xl">
+                    <div className="max-w-8xl relative">
                         <div className="mb-12 text-center">
                             <h3
                                 className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
