@@ -150,3 +150,37 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* Custom animations for collaboration banner */
+@keyframes slow-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes custom-delay-300 {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-slow-spin {
+    animation: slow-spin 20s linear infinite;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* Retro Classics banner spacing consistency */
+section h3,
+section h2 {
+    letter-spacing: -0.02em;
+}

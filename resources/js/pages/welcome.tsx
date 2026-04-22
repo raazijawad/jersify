@@ -575,6 +575,65 @@ export default function Welcome({
                     </div>
                 </section>
 
+                {/* Barça x Ed Sheeran Collaboration Banner */}
+                <section className="relative h-screen overflow-hidden">
+                    <div className="absolute inset-0">
+                        <img
+                            src="/images/1 premier football group events.jpeg"
+                            alt="Barça x Ed Sheeran Collaboration"
+                            className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+                    </div>
+
+                    {/* Barcelona blue accent stripe */}
+                    <div className="absolute top-1/4 left-0 h-32 w-2 bg-[#004D98]" />
+                    <div className="absolute top-1/3 right-0 h-24 w-2 bg-[#f53003]" />
+
+                    <div className="relative flex h-full flex-col items-center justify-center px-8 text-center">
+                        <div className="max-w-2xl space-y-6">
+                            {/* Main Headline */}
+                            <h2 className="text-6xl leading-[0.9] font-black tracking-tight text-white md:text-5xl lg:text-6xl">
+                                <span className="inline-block align-middle">
+                                    BARÇA
+                                </span>
+                                <span className="mx-4 inline-block align-middle text-[#f53003]">
+                                    x
+                                </span>
+                                <span className="inline-block align-middle">
+                                    Ed Sheeran
+                                </span>
+                            </h2>
+
+                            {/* Subtitle - styled like Retro Classics */}
+                            <p className="text-2xl font-light text-white/70 italic md:text-3xl">
+                                The Ultimate Collaboration
+                            </p>
+
+                            {/* Description */}
+                            <p className="mx-auto max-w-lg text-sm leading-relaxed text-white/60 md:text-base">
+                                When football meets music magic. Celebrate the
+                                partnership between FC Barcelona and global
+                                superstar Ed Sheeran.
+                            </p>
+
+                            {/* CTA Button - matching Retro Classics style */}
+                            <div className="pt-6">
+                                <Button
+                                    asChild
+                                    size="lg"
+                                    className="relative bg-[#f53003] px-10 py-7 text-lg font-bold tracking-wider text-white uppercase transition-all hover:bg-[#e42d03] hover:shadow-[0_0_30px_rgba(245,48,3,0.4)]"
+                                >
+                                    <Link href="/">Shop Now</Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bottom accent gradient line */}
+                    <div className="absolute right-0 bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-[#f53003] to-transparent" />
+                </section>
+
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
