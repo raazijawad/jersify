@@ -634,6 +634,70 @@ export default function Welcome({
                     <div className="absolute right-0 bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-[#f53003] to-transparent" />
                 </section>
 
+                {/* Collaboration Text Section */}
+                <section className="bg-white px-6 py-12 dark:bg-[#161615]">
+                    <div className="mx-auto max-w-7xl text-center">
+                        <h3
+                            className="text-5xl tracking-tight text-[#1b1b18] uppercase md:text-6xl dark:text-[#EDEDEC]"
+                            style={{
+                                fontFamily: 'system-ui',
+                                letterSpacing: '-0.02em',
+                            }}
+                        >
+                            <span className="font-bold">TIMELESS</span>{' '}
+                            <span className="font-light">ICONS</span>
+                        </h3>
+                        <p className="text-md mx-auto mt-1 max-w-2xl text-muted-foreground">
+                            Relive the golden era of football
+                        </p>
+                    </div>
+                </section>
+
+                {/* TIMELESS ICONS Cards */}
+                <section className="bg-white pb-16 dark:bg-[#161615]">
+                    <div className="max-w-8xl relative">
+                        <div
+                            className="scrollbar-hide flex gap-4 overflow-x-auto pb-4"
+                            style={{ touchAction: 'pan-x' }}
+                        >
+                            <div className="flex w-max gap-4 px-2">
+                                {[1, 2, 3, 4, 5, 6].map((item) => (
+                                    <div
+                                        key={item}
+                                        className="group relative block w-72 shrink-0"
+                                    >
+                                        <Link
+                                            href="/"
+                                            draggable={false}
+                                            className="block"
+                                        >
+                                            <div className="aspect-[4/5] w-full overflow-hidden">
+                                                <img
+                                                    src="/images/Real-Madrid-pink-dragon-jersey.jpg"
+                                                    alt={`Timeless Icon ${item}`}
+                                                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                />
+                                            </div>
+                                            <div className="mt-2 text-center">
+                                                <h3 className="mb-1 text-sm font-bold tracking-wide text-[#1b1b18] uppercase dark:text-[#EDEDEC]">
+                                                    Classic Jersey
+                                                </h3>
+                                                <p className="mb-1 text-xs text-muted-foreground">
+                                                    Vintage Edition
+                                                </p>
+                                                <p className="text-base font-bold text-[#f53003]">
+                                                    $99.99
+                                                </p>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Top Picks Features */}
                 <section className="bg-white px-6 py-16 dark:bg-[#161615]">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
